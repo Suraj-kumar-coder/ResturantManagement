@@ -1,0 +1,30 @@
+
+
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(111, 74, 5, 0.7);
+      color: white;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .navbar .signup-link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: #ff8c42;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar .signup-link:hover {
+      background-color: #e6762e;
+    }

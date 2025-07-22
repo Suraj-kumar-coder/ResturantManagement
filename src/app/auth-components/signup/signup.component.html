@@ -1,0 +1,156 @@
+<!-- <p>signup works!</p> -->
+
+
+<Body>
+
+  <!--Navbar-->
+<!-- <nav class="navbar">
+    <div class="logo">Tasty Bites</div>
+    <a class="signup-link" href="#">Sign Up</a>
+  </nav> -->
+
+
+<div class="signup-container">
+  <h2 style="text-align: center;">Sign Up</h2>
+  
+
+  
+  <!--form-->
+   <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+   <label for="name">Name:</label>
+  <input id="name" type="text" formControlName="name">
+         
+
+  <!-- Email Field -->
+  <label for="email">Email:</label>
+  <input id="email" type="email" formControlName="email"
+         [ngClass]="{'invalid': signupForm.get('email')?.invalid && signupForm.get('email')?.touched}" />
+  <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid">
+    <small *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</small>
+    <small *ngIf="signupForm.get('email')?.errors?.['email']">Enter a valid email.</small>
+  </div>
+
+  <!-- Password Field -->
+  <label for="password">Password:</label>
+  <input id="password" type="password" formControlName="password"
+         [ngClass]="{'invalid': signupForm.get('password')?.invalid && signupForm.get('password')?.touched}" />
+  <div *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid">
+    <small *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.</small>
+    <small *ngIf="signupForm.get('password')?.errors?.['minlength']">Minimum 6 characters required.</small>
+  </div>
+
+  <!-- Confirm Password Field -->
+  <label for="confirmPassword">Confirm Password:</label>
+  <input id="confirmPassword" type="password" formControlName="confirmPassword"
+         [ngClass]="{'invalid': signupForm.errors?.['mismatch'] && signupForm.get('confirmPassword')?.touched}" />
+  <div *ngIf="signupForm.get('confirmPassword')?.touched">
+    <small *ngIf="signupForm.get('confirmPassword')?.errors?.['required']">Confirm Password is required.</small>
+    <small *ngIf="signupForm.errors?.['mismatch']">Passwords do not match.</small>
+  </div>
+
+  <button type="submit" (click)="register()">Register</button>
+</form>
+  
+<p>
+    Already have an account?
+    <a routerLink="/login">Login</a>
+  </p>
+
+
+  <style>
+  .signup-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 2.5rem;
+    background-color: #fff8f0;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #8B4513;
+  }
+
+  label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+    color: #5a2e0f;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #ff8c42;
+    box-shadow: 0 0 0 3px rgba(255, 140, 66, 0.2);
+  }
+
+  input.invalid {
+    border-color: red;
+  }
+
+  small {
+    color: red;
+    margin-top: 4px;
+    display: block;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #ff8c42;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #e6762e;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+
+</div>
+</Body>
+

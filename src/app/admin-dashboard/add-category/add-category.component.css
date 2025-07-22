@@ -1,0 +1,77 @@
+/* Set full background with restaurant image */
+body {
+  background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93'); /* You can replace with any image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Semi-transparent glass effect container */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.85); /* semi-transparent white */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+/* Form heading */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #d35400; /* warm restaurant color */
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Inputs and textarea */
+input[type="text"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #e67e22;
+  outline: none;
+  box-shadow: 0 0 6px rgba(230, 126, 34, 0.5);
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #e67e22;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+}

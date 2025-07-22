@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>view-Item</title>
+  <link rel="stylesheet" href="view-item.component.css">
+  
+</head>
+<body>
+
+  
+<!-- TOP NAVBAR -->
+<div class="navbar">
+  <div class="marquee">
+    🍽️ Welcome to TastyBites Restaurant 🍔 🍕 🍟
+  </div>
+</div>
+
+
+<form class="search-form" [formGroup]="titleform" (ngSubmit)="onSearch()" >
+  <input
+    type="text"
+    placeholder="Enter the items"
+    formControlName="title"
+    required
+  />
+  <button type="submit" class="search-btn">Search</button>
+</form>
+
+<!-- DATA TABLE -->
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Image</th>
+         <th>Price</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of viewItem">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td><img [src]="item.processedImg" alt="{{ item.name }}" width="80" /></td>
+        <td>{{ item.price}}</td>
+        
+         
+      </tr>
+    </tbody>
+  </table>
+ 
+</div>
+
+
+
+
+
+</body>
+</html>

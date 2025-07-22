@@ -1,0 +1,89 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6347;
+  padding: 12px 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1cm; /* Exact 3cm gap between the boxes */
+}
+
+.nav-box {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.nav-box a {
+  text-decoration: none;
+  color: orange;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-box button {
+  text-decoration: none;
+  color: orange;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-box:hover  {
+  background-color: black;
+}
+
+.nav-box:hover a {
+  color: white;
+}
+
+.nav-box:hover button {
+  color: black;
+}
+
+button{
+  border: white;
+}
+
+.hero-title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #e63946;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-title span {
+  color: #1d3557;
+  font-style: italic;
+  font-weight: 900;
+}
+
+/* Optional fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+

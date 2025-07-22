@@ -1,0 +1,28 @@
+
+
+<h2>Update Category</h2>
+
+<form [formGroup]="updateCategory" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label><br />
+  <input type="text" id="name" formControlName="name" /><br />
+  <div *ngIf="updateCategory.get('name')?.invalid && updateCategory.get('name')?.touched">
+    Name is required.
+  </div><br />
+
+  <label for="description">Description:</label><br />
+  <textarea id="description" formControlName="description" rows="3"></textarea><br />
+  <div *ngIf="updateCategory.get('description')?.invalid && updateCategory.get('description')?.touched">
+    Description is required.
+  </div><br />
+
+  <label for="price">Price:</label><br />
+  <input type="number" id="price" formControlName="price" /><br />
+  <div *ngIf="updateCategory.get('price')?.invalid && updateCategory.get('price')?.touched">
+    Price must be greater than or equal to 0.
+  </div><br />
+
+  <label for="image">Image:</label><br />
+  <input type="file" (change)="onFileSelected($event)" /><br /><br />
+
+  <button type="submit" [disabled]="updateCategory.invalid"(click)="updateCategorys()">Update Category</button>
+</form>

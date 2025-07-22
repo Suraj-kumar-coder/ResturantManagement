@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservation Table</title>
+  <link rel="stylesheet" href="all-reservation.component.css">
+</head>
+<body>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Table Type</th>
+          <th>Description</th>
+          <th>Reservation Time</th>
+          <th>Reservation Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of reservation">
+            
+          <td>{{ item.tableType }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.dateTime | date:'h:mm a' }}</td>
+          <td>{{ item.dateTime | date:'MMM d, y' }}</td>
+          <td>
+            <span [ngClass]="item.reservationStatus === 'Pending'||item.reservationStatus === 'Rejected' ? 'red' : 'green'">
+                
+              {{ item.reservationStatus }}
+            </span>
+          </td>
+          <td>
+            <div class="action-buttons">
+              <button class="approve-btn" (click)="changeReservationStatus(item.id,'Approve')">Approve</button>
+              <button class="disapprove-btn" (click)="changeReservationStatus(item.id,'DisApprove')">DisApprove</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+

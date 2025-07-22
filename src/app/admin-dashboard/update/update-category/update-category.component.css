@@ -1,0 +1,80 @@
+/* Container around the form */
+form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 2px solid #4caf50; /* Green border */
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs and textarea */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1.8px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  font-size: 15px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* File input */
+input[type="file"] {
+  font-size: 14px;
+}
+
+/* Error messages */
+div[ngIf] {
+  color: #e53935;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: #43a047;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

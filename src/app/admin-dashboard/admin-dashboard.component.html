@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin-dashboard</title>
+</head>
+<body>
+  <nav class="navbar">
+  <div class="logo">🍽️ TastyBites</div>
+
+  <div class="nav-buttons">
+    
+    <div class="nav-box">
+      <a routerLink="/home">🏠 Home</a>
+    </div>
+
+    <div class="nav-box">
+      <a routerLink="/view-reservation-admin">View-Reservation</a>
+    </div>
+
+    <div class="nav-box">
+      <a routerLink="/category">category</a>
+    </div>
+   
+    <div class="nav-box">
+      <a routerLink="/add-category">Add category</a>
+    </div>
+    <div class="nav-box">
+      <button (click)="onLogout()">🚪 Logout</button>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-title">
+  🍽️ Welcome to <span>TastyBites</span>
+</div>
+
+</body>
+</html>

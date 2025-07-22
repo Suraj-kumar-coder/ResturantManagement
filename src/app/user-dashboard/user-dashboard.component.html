@@ -1,0 +1,63 @@
+
+<!-- <nav class="navbar">
+  <div class="logo">🍽️ TastyBites</div>
+
+  <div class="nav-links">
+    
+    
+    <button style="width: 80px; height: 40px;font-size: 24px; font-weight:20px ;  ;" (click)="onHome()" >
+      <i  class="fas fa-sign-in-alt"></i> Home
+    </button>
+  </div>
+  
+  <div class="nav-links">
+    
+    <span style="color: white;">{{loggedInUser}}</span>
+    <button style="width: 80px; height: 40px;font-size: 24px; font-weight:20px" (click)="onLogout()" >
+      <i  class="fas fa-sign-in-alt"></i> logout
+    </button>
+  </div>
+  
+</nav> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="user-dashboard.component.css">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+  <div class="logo">🍽️ TastyBites</div>
+
+   <div class="nav-buttons">
+    <div class="nav-box">
+      <a routerLink="/home">🏠 Home</a>
+    </div>
+
+    
+    <div class="nav-box">
+      <a routerLink="/reservation">Reservation</a>
+    </div>
+
+    <div class="nav-box">
+      <a routerLink="/view-reservation">View-Reservation</a>
+    </div>
+    
+    <div class="nav-box">
+      <a routerLink="/view-Item"> View-Item</a>
+    </div>
+    <div class="nav-box">
+      <button (click)="onLogout()">🚪 Logout</button>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-title">
+  🍽️ Welcome to <span>TastyBites</span>
+</div>
+
+</body>
+</html>
